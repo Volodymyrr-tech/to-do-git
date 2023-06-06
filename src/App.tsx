@@ -45,6 +45,7 @@ const App: React.FC = () => {
   return (
     <div
       style={{
+        //bug with dnd
         transform: 'scale(0.7)',
         transformOrigin: 'top left',
         width: '142.86%',
