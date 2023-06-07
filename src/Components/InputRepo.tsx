@@ -7,6 +7,7 @@ import Col from 'react-bootstrap/Col'
 import Nav from 'react-bootstrap/Nav'
 import { StarFill } from 'react-bootstrap-icons'
 import { InputRepoProps } from '../types/types'
+import '../styles/styles.css'
 
 const InputRepo: React.FC<InputRepoProps> = ({ url, setUrl, stars }) => {
   const [input, setInput] = useState('')
@@ -38,7 +39,7 @@ const InputRepo: React.FC<InputRepoProps> = ({ url, setUrl, stars }) => {
               <Form.Control
                 type="text"
                 placeholder="Enter repo URL"
-                size="lg"
+                size="sm"
                 style={{ border: '1px solid black', borderRadius: 0 }}
                 value={input}
                 onChange={(e) => {
@@ -48,8 +49,9 @@ const InputRepo: React.FC<InputRepoProps> = ({ url, setUrl, stars }) => {
             </Col>
             <Col>
               <Button
+                className="margin-sm"
                 type="submit"
-                size="lg"
+                size="sm"
                 variant="outline-dark"
                 style={{ width: '100%', borderRadius: 0 }}
               >

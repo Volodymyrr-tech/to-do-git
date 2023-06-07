@@ -43,19 +43,19 @@ const App: React.FC = () => {
   }
 
   return (
-    <div
-      style={{
-        //bug with dnd
-        transform: 'scale(0.7)',
-        transformOrigin: 'top left',
-        width: '142.86%',
-        height: '142.86%',
-        overflow: 'auto',
-      }}
-    >
-      <InputRepo setUrl={setUrl} url={url} stars={starsData} />
-      <ColumnLists url={url} toDo={toDo} inProgress={inProgress} done={done} />
-    </div>
+    <>
+      <div style={{ maxWidth: '70vw', margin: '0 auto' }}>
+        <InputRepo setUrl={setUrl} url={url} stars={starsData} />
+      </div>
+      <div style={{ maxWidth: '70vw', margin: '0 auto' }}>
+        <ColumnLists
+          url={url}
+          toDo={toDo}
+          inProgress={inProgress}
+          done={done}
+        />
+      </div>
+    </>
   )
 }
 

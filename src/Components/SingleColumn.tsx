@@ -57,7 +57,9 @@ const SingleColumn: React.FC<SingleColumnProps> = ({ list, title, status }) => {
                       <Card className="mb-3 border-dark">
                         <Card.Body>
                           <Card.Title className="fw-bold">
-                            {item.title}
+                            {item.title.length > 100
+                              ? `${item.title.slice(0, 100)}...`
+                              : item.title}
                           </Card.Title>
                           <Card.Text className="font-monospace">
                             #{item.number} {daysAgo(item.created_at)}
